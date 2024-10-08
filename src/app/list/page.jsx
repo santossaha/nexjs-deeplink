@@ -2,9 +2,9 @@
 "use client"; // This ensures that the component is a Client Component
 
 import { useSearchParams } from 'next/navigation'; // Use the new search params hook
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 
-export default function ListPage() {
+function ListContent() {
   const searchParams = useSearchParams(); // Access search parameters
   const source = searchParams.get('source'); // Get the source parameter
   const [sourceInfo, setSourceInfo] = useState(null);
@@ -32,5 +32,13 @@ export default function ListPage() {
         Go back to the app
       </button>
     </div>
+  );
+}
+
+export default function ListPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ListContent />
+    </Suspense>
   );
 }
