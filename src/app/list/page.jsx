@@ -17,7 +17,7 @@ function ListContent() {
 
   const handleRedirectToApp = () => {
     // Redirect the user back to the app using the deep link
-    window.location.href = 'nexjs-deeplink-git-main-santossahas-projects.vercel.app://';
+    window.location.href = 'myNewApp://redirect-back';
   };
 
   return (
