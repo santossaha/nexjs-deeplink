@@ -1,0 +1,26 @@
+{
+    "applinks": {
+      "details": [
+        {
+          "appIDs": [
+            "CJESF9R9MD.com.mt.AppA"
+          ],
+          "components": [
+            {
+              "#": "no_universal_links",
+              "exclude": true
+            },
+            {
+              "/": "/list/*"
+            }
+          ]
+        }
+      ]
+    },
+    "webcredentials": {
+      "apps": [
+        "ABCDE12345.com.example.app"
+      ]
+    }
+  }
+  
