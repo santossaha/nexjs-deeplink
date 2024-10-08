@@ -1,26 +1,21 @@
 {
-    "applinks": {
+  "applinks": {
       "details": [
-        {
-          "appIDs": [
-            "CJESF9R9MD.com.mt.AppA"
-          ],
-          "components": [
-            {
-              "#": "no_universal_links",
-              "exclude": true
-            },
-            {
-              "/": "/list/*"
-            }
-          ]
-        }
-      ]
-    },
-    "webcredentials": {
-      "apps": [
-        "ABCDE12345.com.example.app"
-      ]
-    }
-  }
-  
+           {
+             "appIDs": ["CJESF9R9MD.com.mt.AppA"],
+             "components": [
+               {
+                  "#": "no_universal_links",
+                  "exclude": true,
+                  "comment": "Matches any URL with a fragment that equals no_universal_links and instructs the system not to open it as a universal link."
+               },
+               {
+                
+                  "/": "/list/*",
+                  "comment": "Matches any URL with a path that starts with /list/."
+               }
+             ]
+           }
+       ]
+   }
+}
