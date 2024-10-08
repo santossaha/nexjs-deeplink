@@ -8,7 +8,21 @@
         "paths": [
           "/list/*"
         ]
+      },
+      {
+        "appID": "CJESF9R9MD.com.mt.AppB",  
+        "paths": [
+          "/list/*"  
+        ]
+      },
+      {
+        "appID": "CJESF9R9MD.com.mt.AppC",  
+        "paths": [
+          "/list/*"  
+        ]
       }
     ]
   }
 }
+
+

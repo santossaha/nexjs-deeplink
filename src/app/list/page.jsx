@@ -17,8 +17,9 @@ function ListContent() {
 
   const handleRedirectToApp = () => {
     // Redirect the user back to the app using the deep link
+    const scheme = source ? source.toLowerCase() : 'myapp'; 
     
-    window.location.href = 'myNewApp://redirect-back/'+source;
+    const redirectUrl = `${scheme}://redirect-back`;
   };
 
 
