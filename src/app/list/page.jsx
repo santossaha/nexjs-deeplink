@@ -1,14 +1,36 @@
+// src/app/list/page.jsx
+"use client"; // This ensures that the component is a Client Component
 
-import React from 'react'
+import { useSearchParams } from 'next/navigation'; // Use the new search params hook
+import { useEffect, useState } from 'react';
 
-const page = () => {
+export default function ListPage() {
+  const searchParams = useSearchParams(); // Access search parameters
+  const source = searchParams.get('source'); // Get the source parameter
+  const [sourceInfo, setSourceInfo] = useState(null);
+
+  useEffect(() => {
+    if (source) {
+      setSourceInfo(`Redirected from: ${source}`);
+    }
+  }, [source]);
+
+  const handleRedirectToApp = () => {
+    // Redirect the user back to the app using the deep link
+    window.location.href = 'myapp://redirect-back';
+  };
+
   return (
     <div>
-      <div className="container text-center">
-      <h2 className='p-5'>Current Page</h2>
-      </div>
-    </div>
-  )
-}
+      <h1>This is the List Page</h1>
 
-export default page
+      {/* Show where the user came from */}
+      {sourceInfo && <p>{sourceInfo}</p>}
+
+      {/* Button to redirect back to the app */}
+      <button onClick={handleRedirectToApp}>
+        Go back to the app
+      </button>
+    </div>
+  );
+}
