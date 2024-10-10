@@ -6,19 +6,19 @@
       {
         "appID": "CJESF9R9MD.com.mt.AppA",
         "paths": [
-          "/list/*"
+          "/list-one/*"
         ]
       },
       {
         "appID": "CJESF9R9MD.com.mt.AppB",  
         "paths": [
-          "/list/*"  
+          "/list-two/*"  
         ]
       },
       {
         "appID": "CJESF9R9MD.com.mt.AppC",  
         "paths": [
-          "/list/*"  
+          "/list-three/*"  
         ]
       }
     ]
