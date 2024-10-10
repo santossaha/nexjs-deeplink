@@ -22,7 +22,7 @@ function ListContent() {
 
     //console.log(source, 'source.....');
     
-    const redirectUrl = 'appc://redirect-back';
+    const redirectUrl = 'appb://redirect-back';
   };
 
 
@@ -35,7 +35,7 @@ function ListContent() {
       {sourceInfo && <p>{sourceInfo}</p>}
 
       {/* Button to redirect back to the app */}
-      <Link href="appc://redirect-back">
+      <Link href="appb://redirect-back">
         <a>
           <button >
           appc://redirect-back
