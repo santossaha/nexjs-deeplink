@@ -37,8 +37,8 @@ function ListContent() {
       {/* Button to redirect back to the app */}
       <Link href="appc://redirect-back">
         <a>
-          <button style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
-            Go back to the app
+          <button >
+          appc://redirect-back
           </button>
         </a>
       </Link>
