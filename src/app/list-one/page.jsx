@@ -18,6 +18,8 @@ function ListContent() {
   const handleRedirectToApp = () => {
     // Redirect the user back to the app using the deep link
     const scheme = source ? source.toLowerCase() : 'myapp'; 
+
+    console.log(source, 'source.....');
     
     const redirectUrl = `${scheme}://redirect-back`;
   };
@@ -32,9 +34,24 @@ function ListContent() {
       {sourceInfo && <p>{sourceInfo}</p>}
 
       {/* Button to redirect back to the app */}
-      <button onClick={handleRedirectToApp}>
+      {/* <button onClick={handleRedirectToApp}>
         Go back to the app
-      </button>
+      </button> */}
+
+<button 
+  onClick={handleRedirectToApp} 
+  style={{ 
+    padding: '10px 20px', 
+    backgroundColor: '#4CAF50', 
+    color: 'white', 
+    border: 'none', 
+    borderRadius: '5px', 
+    cursor: 'pointer' 
+  }}
+>
+  Go back to the app
+</button>
+
     </div>
   );
 }
