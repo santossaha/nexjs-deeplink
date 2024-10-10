@@ -3,6 +3,7 @@
 
 import { useSearchParams } from 'next/navigation'; // Use the new search params hook
 import { useEffect, useState, Suspense } from 'react';
+import Link from 'next/link';
 
 function ListContent() {
   const searchParams = useSearchParams(); // Access search parameters
@@ -34,9 +35,13 @@ function ListContent() {
       {sourceInfo && <p>{sourceInfo}</p>}
 
       {/* Button to redirect back to the app */}
-      <button onClick={handleRedirectToApp}>
-        Go back to the app
-      </button>
+      <Link href="appc://redirect-back">
+        <a>
+          <button style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+            Go back to the app
+          </button>
+        </a>
+      </Link>
     </div>
   );
 }
